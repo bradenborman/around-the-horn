@@ -49,10 +49,10 @@ task copyClient(dependsOn: ":app-client:clientBuild") {
 }
 
 task finalizeBuild(type: Copy, dependsOn: build) {
-    from "${buildDir}/libs/server-${version}.war"
+    from "${buildDir}/libs/app-server-${version}.jar"
     into "${buildDir}/libs"
-    rename "server-${version}.war", "cbb-bluechips.war"
-    delete "server-${version}.war"
+    rename "app-server-${version}.jar", "aroundthehorn.jar"
+    delete "app-server-${version}.jar"
 }
 
 processResources.dependsOn(copyClient)

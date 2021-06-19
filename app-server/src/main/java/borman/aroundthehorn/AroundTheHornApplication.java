@@ -17,5 +17,4 @@ public class AroundTheHornApplication extends SpringBootServletInitializer {
         return builder.sources(AroundTheHornApplication.class).initializers();
     }
 
-
 }

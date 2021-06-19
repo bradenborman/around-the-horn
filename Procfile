@@ -1,1 +1,1 @@
-web java $JAVA_OPTS -Dserver.port=$PORT -jar server/build/libs/remane.war
+web java $JAVA_OPTS -Dserver.port=$PORT -jar app-server/build/libs/*.jar
