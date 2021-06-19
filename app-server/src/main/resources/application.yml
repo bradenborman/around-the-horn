@@ -7,7 +7,7 @@ spring:
 
 twilio:
   room-name: ath
-  account-sid: test1
+  account-sid: ${twilio.account.sid}
   api:
-    sid: test2
-    secret: test3
+    sid: ${twilio.api.sid}
+    secret: ${twilio.api.secret}

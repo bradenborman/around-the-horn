@@ -8,6 +8,7 @@ build/
 app-server/src/main/resources/static/
 app-server/src/main/resources/templates/
 
+application-local.yml
 
 ### STS ###
 .apt_generated

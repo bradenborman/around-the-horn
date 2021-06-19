@@ -2,13 +2,17 @@ package borman.aroundthehorn.services;
 
 
 import borman.aroundthehorn.config.properties.TwilioConfigProperties;
+import borman.aroundthehorn.models.TwilioTokenRequest;
 import com.twilio.jwt.accesstoken.AccessToken;
 import com.twilio.jwt.accesstoken.VideoGrant;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TwiloTokenService {
 
+    Logger logger = LoggerFactory.getLogger(TwiloTokenService.class);
 
     TwilioConfigProperties twilioConfigProperties;
 
@@ -16,7 +20,7 @@ public class TwiloTokenService {
         this.twilioConfigProperties = twilioConfigProperties;
     }
 
-    public String accessTokenForRoom(String usernameJoining) {
+    public String accessTokenForRoom(TwilioTokenRequest twilioTokenRequest) {
 
         // Create a VideoGrant
         final VideoGrant grant = new VideoGrant();
@@ -28,13 +32,15 @@ public class TwiloTokenService {
                 twilioConfigProperties.getApi().getSid(),
                 twilioConfigProperties.getApi().getSecret()
         )
-                .identity(usernameJoining) // Set the Identity of this token
+                .identity(twilioTokenRequest.getUsername()) // Set the Identity of this token
                 .grant(grant) // Grant access to Video
                 .build();
 
         // Serialize the token as a JWT
-        return token.toJwt();
+        String tokenStr = token.toJwt();
+        logger.info("Token: {}", tokenStr);
 
+        return tokenStr;
     }
 
 
