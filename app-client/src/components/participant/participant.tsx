@@ -72,7 +72,7 @@ export const Participant: React.FC<IParticipantProps> = (
     <div className="participant">
       <h3>{props.participant.identity}</h3>
       <video ref={videoRef} autoPlay={true} />
-      <audio ref={audioRef} autoPlay={true} muted={true} />
+      <audio ref={audioRef} autoPlay={true} muted={false} />
     </div>
   );
 };
