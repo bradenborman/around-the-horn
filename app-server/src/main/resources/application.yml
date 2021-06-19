@@ -4,3 +4,10 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
+
+twilio:
+  room-name: ath
+  account-sid: test1
+  api:
+    sid: test2
+    secret: test3
