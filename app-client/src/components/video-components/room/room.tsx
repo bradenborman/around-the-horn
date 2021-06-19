@@ -5,6 +5,7 @@ import { Participant } from "../participant/participant";
 export interface IRoomProps {
   roomName: string;
   token: string;
+  handleLogout: (e: any) => void;
 }
 
 export const Room: React.FC<IRoomProps> = (props: IRoomProps) => {
@@ -68,6 +69,7 @@ export const Room: React.FC<IRoomProps> = (props: IRoomProps) => {
 
   return (
     <div className="room">
+      <button onClick={props.handleLogout}>Logout</button>
       <div className="participant-wrapper">
         {getLocalUser()}
         {remoteParticipants}

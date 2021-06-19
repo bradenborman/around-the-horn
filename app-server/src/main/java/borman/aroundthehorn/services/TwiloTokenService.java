@@ -22,6 +22,8 @@ public class TwiloTokenService {
 
     public String accessTokenForRoom(TwilioTokenRequest twilioTokenRequest) {
 
+        logger.info("Getting token for {}, im room {}", twilioTokenRequest.getUsername(), twilioTokenRequest.getRoomName());
+
         // Create a VideoGrant
         final VideoGrant grant = new VideoGrant();
         grant.setRoom(twilioTokenRequest.getRoomName());
@@ -37,10 +39,7 @@ public class TwiloTokenService {
                 .build();
 
         // Serialize the token as a JWT
-        String tokenStr = token.toJwt();
-        logger.info("Token: {}", tokenStr);
-
-        return tokenStr;
+        return token.toJwt();
     }
 
 

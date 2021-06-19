@@ -1,0 +1,36 @@
+.participant {
+  display: inline-block;
+  width: 50%;
+
+  h3 {
+    text-align: center;
+    padding: 0.1em;
+    font-weight: bold;
+    color: black;
+  }
+
+  video {
+    width: 100%;
+    max-width: 600px;
+    min-height: 15vh;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+    -moz-transform: rotateY(180deg); /* Firefox */
+  }
+
+  .player-stats {
+    padding: 4px;
+    width: 100%;
+    font-size: 1.4em;
+    min-height: 20px;
+    border: 2px solid black;
+
+    .points {
+      float: right;
+      margin-right: 10px;
+    }
+  }
+}

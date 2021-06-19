@@ -1,35 +1,52 @@
-form.lobby {
-  max-width: 300px;
-  margin: 0 auto;
+#lobbySignup {
+  margin-top: 5vh;
 
-  > div {
-    width: 100%;
-    margin-bottom: 1em;
+  form.lobby {
+    max-width: 300px;
+    margin: 0 auto;
 
-    > label {
-      display: block;
-      margin-bottom: 0.3em;
-    }
-
-    > input {
-      display: block;
+    > div {
       width: 100%;
+      margin-bottom: 1em;
+
+      > label {
+        display: block;
+        margin-bottom: 0.3em;
+      }
+
+      > input {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        padding: 0.4em;
+        border-radius: 6px;
+        border: 1px solid #333e5a;
+      }
+
+      > select {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        padding: 0.4em;
+        border-radius: 6px;
+        border: 1px solid #333e5a;
+      }
+    }
+    button {
+      background: #333e5a;
+      color: #fff;
+      display: block;
+      margin: auto;
+      width: 50%;
+      margin-top: 3vh;
       font-size: 16px;
       padding: 0.4em;
       border-radius: 6px;
-      border: 1px solid #333e5a;
-    }
-  }
-  button {
-    background: #333e5a;
-    color: #fff;
-    font-size: 16px;
-    padding: 0.4em;
-    border-radius: 6px;
-    border: 1px solid transparent;
+      border: 1px solid transparent;
 
-    &:hover {
-      filter: brightness(150%);
+      &:hover {
+        filter: brightness(150%);
+      }
     }
   }
 }

@@ -70,9 +70,12 @@ export const Participant: React.FC<IParticipantProps> = (
   }, [audioTracks]);
   return (
     <div className="participant">
-      <h3>{props.participant.identity}</h3>
       <video ref={videoRef} autoPlay={true} />
       <audio ref={audioRef} autoPlay={true} muted={false} />
+      <div className="player-stats">
+        {props.participant.identity}
+        <div className="points">7</div>
+      </div>
     </div>
   );
 };

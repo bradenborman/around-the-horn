@@ -22,8 +22,11 @@ export const AroundTheHornApp: React.FC<IAroundTheHornAppProps> = (
           <ReactRoute exact path={"/"}>
             <HomeMenu />
           </ReactRoute>
-          <ReactRoute exact path={"/lobby/:token"}>
+          <ReactRoute path={"/lobby"}>
             <VideoChat />
+          </ReactRoute>
+          <ReactRoute path={"/create-game"}>
+            <h2>Under Contruction</h2>
           </ReactRoute>
         </main>
       </div>

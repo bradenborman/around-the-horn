@@ -10,29 +10,34 @@ export interface ILobbyProps {
 
 export const LobbySignup: React.FC<ILobbyProps> = (props: ILobbyProps) => {
   return (
-    <form className="lobby" onSubmit={props.handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="field"
-          value={props.username}
-          onChange={props.handleUsernameChange}
-          required
-        />
-      </div>
+    <div id="lobbySignup">
+      <form className="lobby" onSubmit={props.handleSubmit}>
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="field"
+            value={props.username}
+            onChange={props.handleUsernameChange}
+            required
+          />
+        </div>
 
-      <div>
-        <label htmlFor="room">Room name:</label>
-        <input
-          type="text"
-          id="room"
-          value={props.roomName}
-          onChange={props.handleRoomNameChange}
-          required
-        />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+        <div>
+          <label htmlFor="room">Room name:</label>
+          <select
+            defaultValue="borman"
+            required
+            onChange={props.handleRoomNameChange}
+          >
+            <option selected value="borman">
+              Borman
+            </option>
+            <option value="chukar">Chukar</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 };
