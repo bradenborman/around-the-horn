@@ -3,7 +3,7 @@ package borman.aroundthehorn.models;
 public class TwilioTokenRequest {
 
     private String username;
-    private String lobbyName;
+    private String roomName;
 
     public String getUsername() {
         return username;
@@ -13,12 +13,11 @@ public class TwilioTokenRequest {
         this.username = username;
     }
 
-    public String getLobbyName() {
-        return lobbyName;
+    public String getRoomName() {
+        return roomName;
     }
 
-    public void setLobbyName(String lobbyName) {
-        this.lobbyName = lobbyName;
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
-
 }

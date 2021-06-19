@@ -4,16 +4,23 @@
 
   .participant-wrapper {
     margin: auto;
-    background-color: yellow;
+    margin-top: 2vh;
     width: 100%;
     max-width: 800px;
+    display: block;
 
     .participant {
       display: inline-block;
       width: 50%;
-      background: #333e5a;
-      padding: 10px;
+      background-color: yellow;
       border-radius: 6px;
+
+      h3 {
+        text-align: center;
+        padding: 0.1em;
+        font-weight: bold;
+        color: black;
+      }
     }
 
     video {

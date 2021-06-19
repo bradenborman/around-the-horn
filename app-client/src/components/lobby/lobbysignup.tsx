@@ -22,16 +22,16 @@ export const LobbySignup: React.FC<ILobbyProps> = (props: ILobbyProps) => {
         />
       </div>
 
-      {/* <div>
-                <label htmlFor="room">Room name:</label>
-                <input
-                    type="text"
-                    id="room"
-                    value={props.roomName}
-                    onChange={props.handleRoomNameChange}
-                    required
-                />
-            </div> */}
+      <div>
+        <label htmlFor="room">Room name:</label>
+        <input
+          type="text"
+          id="room"
+          value={props.roomName}
+          onChange={props.handleRoomNameChange}
+          required
+        />
+      </div>
       <button type="submit">Submit</button>
     </form>
   );

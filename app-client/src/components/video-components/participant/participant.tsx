@@ -68,7 +68,6 @@ export const Participant: React.FC<IParticipantProps> = (
       };
     }
   }, [audioTracks]);
-
   return (
     <div className="participant">
       <h3>{props.participant.identity}</h3>

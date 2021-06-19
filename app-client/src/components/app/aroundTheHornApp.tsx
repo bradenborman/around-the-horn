@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { VideoChat } from "../video-components/videoChat";
 import {
   BrowserRouter as ReactRouter,
@@ -22,7 +22,7 @@ export const AroundTheHornApp: React.FC<IAroundTheHornAppProps> = (
           <ReactRoute exact path={"/"}>
             <HomeMenu />
           </ReactRoute>
-          <ReactRoute exact path={"/lobby/:lobbyName"}>
+          <ReactRoute exact path={"/lobby/:token"}>
             <VideoChat />
           </ReactRoute>
         </main>
