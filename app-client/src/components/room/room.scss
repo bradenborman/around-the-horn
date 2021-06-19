@@ -1,0 +1,43 @@
+.room {
+  position: relative;
+  background-color: white;
+
+  .participant-wrapper {
+    margin: auto;
+    background-color: yellow;
+    width: 100%;
+    max-width: 800px;
+
+    .participant {
+      display: inline-block;
+      width: 50%;
+      background: #333e5a;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 6px;
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+      -moz-transform: rotateY(180deg); /* Firefox */
+    }
+  }
+
+  button {
+    background: #333e5a;
+    color: #fff;
+    font-size: 16px;
+    padding: 0.4em;
+    border-radius: 6px;
+    border: 1px solid transparent;
+
+    &:hover {
+      filter: brightness(150%);
+    }
+  }
+}

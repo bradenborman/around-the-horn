@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import Video from "twilio-video";
 
 export interface IParticipantProps {
-  participant: any;
+  participant: Video.LocalParticipant | Video.RemoteParticipant;
 }
 
 export const Participant: React.FC<IParticipantProps> = (

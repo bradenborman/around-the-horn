@@ -10,8 +10,7 @@ export interface ILobbyProps {
 
 export const Lobby: React.FC<ILobbyProps> = (props: ILobbyProps) => {
   return (
-    <form onSubmit={props.handleSubmit}>
-      <h2>Enter a room</h2>
+    <form className="lobby" onSubmit={props.handleSubmit}>
       <div>
         <label htmlFor="name">Name:</label>
         <input
