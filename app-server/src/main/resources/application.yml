@@ -6,7 +6,6 @@ spring:
       enabled: ALWAYS
 
 twilio:
-  room-name: ath
   account-sid: ${twilio.account.sid}
   api:
     sid: ${twilio.api.sid}

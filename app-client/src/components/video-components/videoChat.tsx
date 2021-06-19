@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Lobby } from "../lobby/lobby";
-import { Room } from "../room/room";
+
+import { useParams } from "react-router";
+
+import { LobbySignup } from "../lobby/lobbysignup";
+import { Room } from "./room/room";
 import axios from "axios";
 
 export interface IVideoChatProps {}
@@ -8,6 +11,8 @@ export interface IVideoChatProps {}
 export const VideoChat: React.FC<IVideoChatProps> = (
   props: IVideoChatProps
 ) => {
+  let { lobbyName } = useParams();
+
   const [username, setUsername] = useState("");
   const [roomName, setRoomName] = useState<string>("");
   const [token, setToken] = useState<string>();
@@ -46,7 +51,7 @@ export const VideoChat: React.FC<IVideoChatProps> = (
     );
   } else {
     render = (
-      <Lobby
+      <LobbySignup
         username={username}
         roomName={roomName}
         handleUsernameChange={handleUsernameChange}

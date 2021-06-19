@@ -8,7 +8,7 @@ export interface ILobbyProps {
   handleSubmit: (e: any) => void;
 }
 
-export const Lobby: React.FC<ILobbyProps> = (props: ILobbyProps) => {
+export const LobbySignup: React.FC<ILobbyProps> = (props: ILobbyProps) => {
   return (
     <form className="lobby" onSubmit={props.handleSubmit}>
       <div>

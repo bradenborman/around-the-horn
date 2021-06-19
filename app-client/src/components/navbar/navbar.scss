@@ -1,0 +1,23 @@
+header {
+  background: $darkRed;
+  background: linear-gradient($darkRed, 85%, $lightRed);
+  color: #fff;
+  flex-grow: 0;
+  border-top: $blue 8px solid;
+  border-left: $blue 8px solid;
+  border-bottom: $lightBlue 4px solid;
+  border-right: $lightBlue 4px solid;
+
+  h1 {
+    font-weight: 300;
+    padding: 0.1em 0;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+
+  .highlight {
+    width: 100%;
+    background-color: $yellow;
+    height: 5px;
+  }
+}

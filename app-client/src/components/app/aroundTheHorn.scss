@@ -1,6 +1,7 @@
 @import "colors.scss";
-@import "../lobby/lobby.scss";
-@import "../room/room.scss";
+@import "../navbar/navbar.scss";
+@import "../lobby/lobbysignup.scss";
+@import "../video-components/room/room.scss";
 
 * {
   margin: 0;
@@ -18,40 +19,7 @@ body {
   min-height: 100%;
 }
 
-header {
-  background: $darkRed;
-  background: linear-gradient($darkRed, 85%, $lightRed);
-  color: #fff;
-  flex-grow: 0;
-  border-top: $blue 8px solid;
-  border-left: $blue 8px solid;
-  border-bottom: $lightBlue 4px solid;
-  border-right: $lightBlue 4px solid;
-}
-
-h1 {
-  font-weight: 300;
-  padding: 0.1em 0;
-  margin-left: 10px;
-  font-weight: bold;
-}
-
 .app {
   min-height: 100vh;
   background-color: white;
-}
-
-footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100vw;
-  background: #333e5a;
-  color: #fff;
-  text-align: center;
-  flex-grow: 0;
-  padding: 1em 0;
-}
-
-footer a {
-  color: #fff;
 }

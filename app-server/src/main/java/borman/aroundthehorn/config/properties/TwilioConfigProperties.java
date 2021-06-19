@@ -8,17 +8,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TwilioConfigProperties {
 
-    private String roomName;
     private String accountSid;
     private Api api;
-
-    public String getRoomName() {
-        return roomName;
-    }
-
-    public void setRoomName(String roomName) {
-        this.roomName = roomName;
-    }
 
     public String getAccountSid() {
         return accountSid;

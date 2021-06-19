@@ -24,7 +24,7 @@ public class TwiloTokenService {
 
         // Create a VideoGrant
         final VideoGrant grant = new VideoGrant();
-        grant.setRoom(twilioConfigProperties.getRoomName());
+        grant.setRoom(twilioTokenRequest.getLobbyName());
 
         // Create an Access Token
         final AccessToken token = new AccessToken.Builder(
