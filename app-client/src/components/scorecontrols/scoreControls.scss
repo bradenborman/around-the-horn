@@ -1,0 +1,46 @@
+#score-controls {
+  background-color: #e6e9e8;
+  width: 300px;
+  height: 50vh;
+  position: absolute;
+  right: 50px;
+  top: 10vh;
+  border-radius: 10px;
+  border: 1px solid black;
+
+  h2 {
+    margin-top: 10px;
+  }
+
+  #button-wrapper {
+    text-align: left;
+    padding: 10px;
+    .player-btn-group {
+      border: 1px solid black;
+      border-radius: 8px;
+      background-color: white;
+
+      div {
+        display: inline-block;
+      }
+      .name {
+        margin-top: 20px;
+        margin-left: 10px;
+        float: left;
+        width: 70%;
+      }
+      .score-adjust-btn-wrapper {
+        button.control {
+          margin: auto;
+          width: 95%;
+          display: block;
+          margin: 5px;
+          background-color: $yellow;
+          font-weight: bold;
+          padding: 5px;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}

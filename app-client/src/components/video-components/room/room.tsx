@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Video from "twilio-video";
 import { Participant } from "../participant/participant";
+import { ScoreControls } from "../../scorecontrols/scoreControls";
 
 export interface IRoomProps {
   roomName: string;
@@ -74,6 +75,7 @@ export const Room: React.FC<IRoomProps> = (props: IRoomProps) => {
         {getLocalUser()}
         {remoteParticipants}
       </div>
+      <ScoreControls />
     </div>
   );
 };
