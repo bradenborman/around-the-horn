@@ -19,4 +19,8 @@ public class RoomService {
         return roomDao.fetchAllRooms();
     }
 
+    public void insertRoom(Room room) {
+        roomDao.insertRoom(room);
+    }
+
 }
