@@ -7,12 +7,20 @@ header {
   border-left: $blue 8px solid;
   border-bottom: $lightBlue 4px solid;
   border-right: $lightBlue 4px solid;
+  text-align: center;
 
   h1 {
     font-weight: 300;
     padding: 0.1em 0;
     margin-left: 10px;
     font-weight: bold;
+  }
+
+  .logo {
+    position: absolute;
+    left: 3vw;
+    top: -25px;
+    width: 150px;
   }
 
   .highlight {
