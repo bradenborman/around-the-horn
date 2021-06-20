@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 
-import { useParams } from "react-router";
-
 import { Room } from "./room/room";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { LobbySignup } from "../lobby/lobbysignup";
 
 export interface IVideoChatProps {}

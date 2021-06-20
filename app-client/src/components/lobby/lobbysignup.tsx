@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import axios from "axios";
 
 export interface ILobbyProps {
   username: string;
@@ -9,6 +10,21 @@ export interface ILobbyProps {
 }
 
 export const LobbySignup: React.FC<ILobbyProps> = (props: ILobbyProps) => {
+  const [roomsToSelcectFrom, setRoomsToSelcectFrom] = useState<string[]>([]);
+
+  useEffect(() => {
+    axios.get("/api/rooms").then(response => {
+      setRoomsToSelcectFrom(response.data);
+    });
+  }, []);
+
+  const rooms =
+    roomsToSelcectFrom == null
+      ? null
+      : roomsToSelcectFrom.map(room => {
+          return <option value={room}>{room}</option>;
+        });
+
   return (
     <div id="lobbySignup">
       <form className="lobby" onSubmit={props.handleSubmit}>
@@ -25,18 +41,16 @@ export const LobbySignup: React.FC<ILobbyProps> = (props: ILobbyProps) => {
 
         <div>
           <label htmlFor="room">Room name:</label>
-          <select
-            defaultValue="borman"
-            required
-            onChange={props.handleRoomNameChange}
-          >
-            <option selected value="borman">
-              Borman
+          <select required onChange={props.handleRoomNameChange}>
+            <option selected disabled>
+              Please select a room
             </option>
-            <option value="chukar">Chukar</option>
+            {rooms}
           </select>
         </div>
-        <button type="submit">Submit</button>
+        <button disabled={!(props.roomName && props.username)} type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );
