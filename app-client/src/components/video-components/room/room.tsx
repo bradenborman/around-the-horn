@@ -75,7 +75,7 @@ export const Room: React.FC<IRoomProps> = (props: IRoomProps) => {
         {getLocalUser()}
         {remoteParticipants}
       </div>
-      <ScoreControls />
+      {/* <ScoreControls /> */}
     </div>
   );
 };
