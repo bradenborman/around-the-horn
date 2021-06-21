@@ -7,7 +7,7 @@ spring:
     username: ${spring.datasource.username}
     password: ${spring.datasource.password}
     hikari:
-      max-lifetime: 10000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
+      max-lifetime: 30000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
 
 twilio:
   account-sid: ${twilio.account.sid}
