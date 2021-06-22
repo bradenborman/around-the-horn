@@ -1,9 +1,33 @@
 #HomeMenu {
   text-align: center;
-  margin-top: 5vh;
+  margin-top: 0vh;
 
-  .option {
-    font-size: 2em;
-    margin-bottom: 2vh;
+  img {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .options-wrapper {
+    margin-top: 60vh;
+    z-index: 99;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+
+    background-color: #e7442e;
+    border: 5px solid #76f013;
+
+    .option {
+      font-size: 2em;
+      margin-bottom: 2vh;
+      font-weight: bold;
+
+      a {
+        color: white;
+        font-family: "Roboto Mono", monospace;
+      }
+    }
   }
 }

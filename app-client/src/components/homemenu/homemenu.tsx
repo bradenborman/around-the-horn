@@ -8,11 +8,14 @@ export interface IHomeMenuProps {}
 export const HomeMenu: React.FC<IHomeMenuProps> = (props: IHomeMenuProps) => {
   return (
     <div id="HomeMenu">
-      <div className="option">
-        <Link to="/lobby">Join Lobby</Link>
-      </div>
-      <div className="option">
-        <Link to="/create-game">Create Game</Link>
+      <img src="/img/loadingscreen.png" />
+      <div className="options-wrapper">
+        <div className="option">
+          <Link to="/lobby">Join Lobby</Link>
+        </div>
+        <div className="option">
+          <Link to="/create-game">Create Game</Link>
+        </div>
       </div>
     </div>
   );

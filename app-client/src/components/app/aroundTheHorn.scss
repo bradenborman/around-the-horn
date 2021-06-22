@@ -7,6 +7,9 @@
 @import "../video-components/participant/participant.scss";
 @import "../scorecontrols/scoreControls.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -21,9 +24,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   color: #333e5a;
   min-height: 100%;
-}
-
-.app {
-  min-height: 100vh;
-  background-color: white;
+  height: 100vh;
+  overflow: hidden;
 }

@@ -14,18 +14,20 @@ header {
     padding: 0.1em 0;
     margin-left: 10px;
     font-weight: bold;
+    font-family: "Dela Gothic One", cursive;
   }
 
-  .logo {
-    position: absolute;
-    left: 50px;
-    top: 0;
-    width: 130px;
-  }
+  // .logo {
+  //   position: absolute;
+  //   left: 50px;
+  //   top: 0;
+  //   width: 130px;
+  // }
 
   .highlight {
     width: 100%;
-    background-color: $yellow;
+    background-image: linear-gradient($yellow, #76f015);
+
     height: 5px;
   }
 }
